@@ -46,6 +46,5 @@ git commit --amend -m "Afegit capítol sobre gestió de branques a l'índex"
 ## 5.3
 git log
 
-# 6
-# Indicar a Git que vols ignorar tots els fitxers que comencen per "daw", tots els que tenen l'extensió "out" i les imatges (jpg, png, bmp i gif).
+# 6 Indicar a Git que vols ignorar tots els fitxers que comencen per "daw", tots els que tenen l'extensió "out" i les imatges (jpg, png, bmp i gif).
 echo -e "daw*\n*.out\n*.jpg\n*.png\n*.bmp\n*.gif" > .gitignore
