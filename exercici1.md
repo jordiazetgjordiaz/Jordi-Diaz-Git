@@ -30,7 +30,8 @@ git commit -m "Afegit index al llibre i vist estat del repositori"
 ## 4.1 Modificar i mostrar el fitxer index
 echo "Capítol 1: Introducció a Git\nCapítol 2: Flux de treball bàsic\nCapítol 3: Gestió de branques\nCapítol 4: Repositoris remots" > index.txt
 
-## 4.2 `git diff`
+## 4.2 
+`git diff`
 
 ## 4.3
 git add index.txt && git commit -m "Afegit capítol sobre gestió de branques"
