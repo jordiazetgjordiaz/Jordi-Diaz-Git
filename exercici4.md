@@ -1,75 +1,81 @@
 Exercici GIT 4: Gestió de branques 
 
-1
--git branch bibliografia
+# Paso 1
+git branch bibliografia
+git branch
 
--git branch
+# Paso 2 - Trabajando en la rama 'bibliografia'
+git checkout bibliografia
 
-2
--git checkout bibliografia
-
--Afegir els canvis a la zona d'intercanvi temporal.
-Fer un commit amb el missatge "Afegit capítol 4."
-
--echo "Afegir els canvis a la zona d'intercanvi temporal." > capítols/capitol4.txt
+# Realizar cambios en el archivo capitol4.txt
+echo "Afegir els canvis a la zona d'intercanvi temporal." > capítols/capitol4.txt
 echo "Fer un commit amb el missatge \"Afegit capítol 4.\"" >> capítols/capitol4.txt
 
--git add capítols/capitol4.txt
+# Agregar cambios al área de preparación
+git add capítols/capitol4.txt
 
--git commit -m "Afegit capítol 4."
+# Realizar un commit
+git commit -m "Afegit capítol 4."
 
--git log --all --graph --oneline
+# Ver el historial de commits
+git log --all --graph --oneline
 
-3
--git checkout bibliografia
+# Paso 3 - Trabajando en la rama 'bibliografia' nuevamente
+git checkout bibliografia
 
--Afegeix els canvis a la zona d'intercanvi temporal.
-Fer un commit amb el missatge "Afegida primera referència bibliogràfica."
-
--echo "Afegeix els canvis a la zona d'intercanvi temporal." > bibliografia.txt
+# Realizar cambios en el archivo bibliografia.txt
+echo "Afegeix els canvis a la zona d'intercanvi temporal." > bibliografia.txt
 echo "Fer un commit amb el missatge \"Afegida primera referència bibliogràfica.\"" >> bibliografia.txt
 
--git add bibliografia.txt
+# Agregar cambios al área de preparación
+git add bibliografia.txt
 
--git commit -m "Afegida primera referència bibliogràfica."
+# Realizar un commit
+git commit -m "Afegida primera referència bibliogràfica."
 
--git log --all --graph --oneline
+# Ver el historial de commits
+git log --all --graph --oneline
 
-4
--git checkout master
+# Paso 4 - Fusionar la rama 'bibliografia' con 'master'
+git checkout master
 git merge bibliografia
 
--git log --all --graph --oneline
+# Ver el historial de commits después de la fusión
+git log --all --graph --oneline
 
--git branch -d bibliografia
+# Eliminar la rama 'bibliografia' después de la fusión
+git branch -d bibliografia
 
--git log --all --graph --oneline
+# Ver el historial de commits después de eliminar la rama
+git log --all --graph --oneline
 
-5
--git branch bibliografia
+# Paso 5 - Crear y trabajar en la rama 'bibliografia' nuevamente
+git branch bibliografia
+git checkout bibliografia
 
--git checkout bibliografia
+# Realizar cambios en el archivo bibliografia.txt
+echo "Afegeix els canvis a la zona d'intercanvi temporal i fer un commit amb el missatge \"Afegida nova referència bibliogràfica.\"" > bibliografia.txt
 
--Afegeix els canvis a la zona d'intercanvi temporal i fer un commit amb el missatge "Afegida nova referència bibliogràfica."
-
--echo "Afegeix els canvis a la zona d'intercanvi temporal i fer un commit amb el missatge \"Afegida nova referència bibliogràfica.\"" > bibliografia.txt
-
--git add bibliografia.txt
+# Agregar cambios al área de preparación y realizar un commit
+git add bibliografia.txt
 git commit -m "Afegida nova referència bibliogràfica."
 
--git checkout master
+# Cambiar a la rama 'master'
+git checkout master
 
--Afegeix els canvis a la zona d'intercanvi temporal i fer un commit amb el missatge "Afegida nova referència bibliogràfica."
+# Realizar cambios en el archivo bibliografia.txt en 'master'
+echo "Afegeix els canvis a la zona d'intercanvi temporal i fer un commit amb el missatge \"Afegida nova referència bibliogràfica.\"" > bibliografia.txt
 
--echo "Afegeix els canvis a la zona d'intercanvi temporal i fer un commit amb el missatge \"Afegida nova referència bibliogràfica.\"" > bibliografia.txt
-
--git add bibliografia.txt
+# Agregar cambios al área de preparación y realizar un commit en 'master'
+git add bibliografia.txt
 git commit -m "Afegida nova referència bibliogràfica."
 
--git merge bibliografia
--Afegeix els canvis a la zona d'intercanvi temporal i fer un commit amb el missatge "Afegida nova referència bibliogràfica."
+# Fusionar la rama 'bibliografia' con 'master' y resolver conflictos si es necesario
+git merge bibliografia
 
--git add bibliografia.txt
+# Agregar cambios al área de preparación y realizar un commit después de resolver conflictos
+git add bibliografia.txt
 git commit -m "Resolt conflicte de bibliografia."
 
--git log --all --graph --oneline
+# Ver el historial de commits
+git log --all --graph --oneline
